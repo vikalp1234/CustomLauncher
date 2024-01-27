@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingTop="@dimen/_5sdp"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeScreenFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="6dp">
+
+        <LinearLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:background="@drawable/shape"
+            android:alpha="0.7"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/topTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvDate"
+                android:textColor="@color/bluetv"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.566"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.328" />
+
+            <TextView
+                android:id="@+id/daystv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvDate"
+                android:textColor="@color/bluetv"
+                app:layout_constraintEnd_toEndOf="@+id/topTextView"
+                app:layout_constraintStart_toStartOf="@+id/topTextView"
+                app:layout_constraintTop_toBottomOf="@+id/topTextView" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:alpha="0.9"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/layoutshape"
+            android:padding="5dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/_15sdp"
+                app:layout_constraintTop_toBottomOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="7dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/myspacetv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="@string/myspae"
+                        android:textColor="@color/bluetv"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/topTextView"
+                        app:layout_constraintStart_toStartOf="@+id/topTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/topTextView" />
+
+                    <TextView
+                        android:id="@+id/myachivetv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:text="@string/myachive"
+                        android:textColor="@color/black"
+                        android:drawableLeft="@drawable/achievement"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/topTextView"
+                        app:layout_constraintStart_toStartOf="@+id/topTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/topTextView" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/qu_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="@string/tvDate"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:textSize="@dimen/_15ssp"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/topTextView"
+                app:layout_constraintStart_toStartOf="@+id/topTextView"
+                app:layout_constraintTop_toBottomOf="@+id/topTextView" />
+
+        </LinearLayout>
+
+     <androidx.appcompat.widget.AppCompatButton
+         android:layout_height="wrap_content"
+         android:layout_width="@dimen/_120sdp"
+         android:layout_gravity="center_horizontal"
+         android:text="@string/enter"
+         android:id="@+id/btn_enter"
+         android:background="@drawable/shape"
+         android:layout_marginTop="-25dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
